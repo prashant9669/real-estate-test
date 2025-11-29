@@ -1,7 +1,7 @@
 // src/components/sections/TopLocationsSection.jsx
 
 import { TOP_LOCATIONS } from "../../data/landingData";
-import hostspot from "../../assets/Hotspot.png";
+import hotspot from "../../assets/hotspot.png";
 
 export default function TopLocationsSection() {
     return (
@@ -9,7 +9,7 @@ export default function TopLocationsSection() {
           
             <div className="absolute inset-0">
                 <img
-                    src={hostspot}
+                    src={hotspot}
                     alt=""
                     className="w-full h-full object-cover"
                 />
