@@ -6,7 +6,7 @@ import hostspot from "../../assets/Hotspot.png";
 export default function TopLocationsSection() {
     return (
         <section className="relative h-[100vh] bg-slate-50 overflow-hidden text-slate-900">
-            {/* MAP BACKGROUND */}
+          
             <div className="absolute inset-0">
                 <img
                     src={hostspot}
@@ -16,9 +16,9 @@ export default function TopLocationsSection() {
             
             </div>
 
-            {/* CONTENT */}
+          
             <div className="relative h-full container mx-auto flex flex-col items-center pt-16">
-                {/* HEADER */}
+                
                 <div className="text-center max-w-7xl">
                     <h2 className="text-3xl md:text-8xl  leading-snug">
                         <span className="text-[#13A655]">Top locations</span>{" "}
@@ -42,32 +42,32 @@ export default function TopLocationsSection() {
                         >
                             {/* WRAPPER */}
                             <div
-                                className="
+                                className={`
                                         relative w-16 h-16 md:w-20 md:h-20    
                                         group-hover:w-72 group-hover:h-80 md:group-hover:w-80 md:group-hover:h-[340px]
                                         bg-white border border-slate-200 shadow-[0_15px_35px_rgba(15,23,42,0.35)]
                                         rounded-full group-hover:rounded-2xl
                                         overflow-hidden cursor-pointer
                                         transition-all duration-500 ease-out
-                                        "
+                                        `}
                             >
                                 {/* IMAGE */}
                                 <img
                                     src={loc.image}
                                     alt=""
-                                    className="
+                                    className={`
         w-full h-full object-cover
         transition-all duration-500 ease-out
         group-hover:h-40
-      "
+      `}
                                 />
 
                                 <div
-                                    className="
+                                    className={`
         opacity-0 group-hover:opacity-100
         transition-opacity duration-500 delay-200 ease-out
         p-4
-      "
+      `}
                                 >
                                     <p className="text-[11px] uppercase tracking-wide text-emerald-500 font-semibold">
                                         {loc.type}
