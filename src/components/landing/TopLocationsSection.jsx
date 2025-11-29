@@ -1,7 +1,7 @@
 // src/components/sections/TopLocationsSection.jsx
 
 import { TOP_LOCATIONS } from "../../data/landingData";
-import Hostspot from "../../assets/Hotspot.png";
+import hostspot from "../../assets/Hotspot.png";
 
 export default function TopLocationsSection() {
     return (
@@ -9,7 +9,7 @@ export default function TopLocationsSection() {
             {/* MAP BACKGROUND */}
             <div className="absolute inset-0">
                 <img
-                    src={Hostspot}
+                    src={hostspot}
                     alt=""
                     className="w-full h-full object-cover"
                 />
