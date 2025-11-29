@@ -58,7 +58,7 @@ export default function FeaturedProjectSection() {
       <div className="absolute inset-0 bg-black/45 backdrop-blur-[1px]" />
 
       <div className="relative h-full flex items-center">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto ">
           <AnimatedWrapper key={current}>
             <div className="bg-white/10 backdrop-blur-xl p-8 rounded-2xl max-w-xl border border-white/20">
 
@@ -81,7 +81,7 @@ export default function FeaturedProjectSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-10 left-0 right-0 px-6">
+      <div className="absolute bottom-10 left-0 right-0 ">
         <div className="container mx-auto flex justify-between items-center">
 
           <p className="text-white text-xl tracking-wider">
@@ -102,14 +102,14 @@ export default function FeaturedProjectSection() {
               onClick={prev}
               className="w-10 h-10 bg-white/10 border border-white/40 rounded-lg flex items-center justify-center text-white hover:bg-white/20 backdrop-blur-sm"
             >
-              <ChevronLeft size={20} />
+              ←
             </button>
 
             <button
               onClick={next}
-              className="w-10 h-10 bg-white/10 border border-white/40 rounded-lg flex items-center justify-center text-white hover:bg-white/20 backdrop-blur-sm"
+              className="w-10 h-10 text-black bg-white/10 border border-white/40 rounded-lg flex items-center justify-center text-white hover:bg-white/20 backdrop-blur-sm"
             >
-              <ChevronRight size={20} />
+              →
             </button>
           </div>
 

@@ -33,7 +33,7 @@ export default function LandingPage() {
       <FAQSection />
       <BigCtaBand />
       <TestimonialsSection />
-      <BottomSearchStrip />
+      {/* <BottomSearchStrip /> */}
 
       <Footer />
     </div>

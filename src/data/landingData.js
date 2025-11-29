@@ -2,6 +2,10 @@
 import dream1 from "../assets/dream1.jpg";
 import dream2 from "../assets/dream2.jpeg";
 import dream3 from "../assets/dream3.jpg";
+import image1 from "../assets/image1.jpg";
+import image2 from "../assets/image2.jpg";
+import image3 from "../assets/image3.jpg";
+import image4 from "../assets/image4.jpg";
 export const HERO_TABS = ["BUY", "RENT", "COMMERCIAL", "PLOT / LAND"];
 
 export const PROPERTY_TYPE_OPTIONS = ["Residential", "Villa", "Studio"];
@@ -148,25 +152,25 @@ export const SERVICES = [
     title: "Property Verification",
     description:
       "PROTIVA Agents verify documents ensure your property is genuine and dispute-free.",
-      image:dream1,
+      image:image1,
   },
   {
     title: "Legal & Documentation",
     description:
       "We help review titles, deeds, and agreements so you can buy with complete confidence.",
-      image:dream1,
+      image:image2,
   },
   {
     title: "Renovation & Handover",
     description:
       "Basic fixes to full upgrades PROTIVA partners ensure your new home is move-in ready.",
-      image:dream1,
+      image:image3,
   },
   {
     title: "CCTV Renovation Monitoring",
     description:
       "Track your renovation progress from anywhere in the world. With live CCTV coverage",
-      image:dream1,
+      image:image4,
   },
 ];
 

@@ -6,8 +6,8 @@ import Icon from "../../assets/dream1.jpg";
 
 export default function DevelopersSection() {
   return (
-    <section className="relative bg-[url('./assets/building.jpg')] bg-cover bg-center h-[100vh] py-20 mt-[150px]">
-      <div className="container mx-auto px-6">
+    <section className="relative bg-[url('./assets/building.jpg')] bg-cover bg-center h-[82vh] py-20 mt-[150px]">
+      <div className="container mx-auto ">
         <div className="flex flex-col gap-6 mb-8">
           <h2 className="text-6xl font-medium text-white leading-tight">
             Featured <span className="text-[#3FD797]">Developers</span> in Lagos

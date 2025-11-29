@@ -1,26 +1,20 @@
 import { ArrowRight, Facebook, Instagram, Youtube } from "lucide-react";
+import { Link } from "react-router-dom";
+import Logo from "../assets/logo.png";
 
 export default function Footer() {
   return (
     <footer className="bg-[#02150E] mt-20 text-white">
-      <div className="container mx-auto px-6 pt-16 pb-8">
+      <div className="container mx-auto  pt-16 pb-8">
         {/* TOP GRID */}
         <div className="grid gap-12 lg:grid-cols-[2fr_1fr_1fr_2fr]">
           {/* BRAND + ADDRESS */}
           <div>
             <div className="flex items-center gap-3">
-              {/* Logo box – replace with real logo img if you have */}
-              <div className="h-10 w-10 rounded-md border border-[#3FD797] flex items-center justify-center">
-                <span className="text-xl font-bold text-[#3FD797]">R</span>
-              </div>
-              <div className="leading-tight">
-                <p className="text-sm font-semibold tracking-wide">
-                  PROTIVA
-                </p>
-                <p className="text-xs tracking-[0.15em] uppercase">
-                  Grandview
-                </p>
-              </div>
+               <Link to="/" className="flex items-center gap-2">
+            <img src={Logo} alt="logo" className="w-[200px]" />
+            
+          </Link>
             </div>
 
             <div className="mt-6 space-y-1 text-xs leading-relaxed text-slate-200">

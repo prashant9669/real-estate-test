@@ -15,12 +15,12 @@ export default function FAQSection() {
   return (
     <section className="relative py-20">
       <div
-        className="bg-[url('./assets/building.jpg')] absolute inset-0  bg-cover bg-center"
+        className="bg-[url('./assets/bg1.jpg')] absolute inset-0  bg-cover bg-center"
         aria-hidden="true"
       />
       
 
-      <div className="relative container mx-auto px-6 flex flex-col lg:flex-row  gap-10">
+      <div className="relative container mx-auto  flex flex-col lg:flex-row  gap-10">
         <div className="w-[40%] text-white">
           <h2 className="text-4xl md:text-5xl lg:text-5xl  leading-tight">
             Real Estate{" "}

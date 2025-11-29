@@ -1,7 +1,8 @@
+// components/ImageModal.jsx
 import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function ImageModal({ images, startIndex, onClose }) {
+export default function ImageModal({ images, startIndex = 0, onClose }) {
   const [current, setCurrent] = useState(startIndex);
 
   const next = () => setCurrent((prev) => (prev + 1) % images.length);
@@ -12,7 +13,9 @@ export default function ImageModal({ images, startIndex, onClose }) {
     const handleEsc = (e) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", handleEsc);
     return () => window.removeEventListener("keydown", handleEsc);
-  }, []);
+  }, [onClose]);
+
+  if (!images || images.length === 0) return null;
 
   return (
     <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-[9999]">

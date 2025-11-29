@@ -58,15 +58,16 @@ export default function TestimonialsSection() {
                     <div className="flex gap-3">
                         <button
                             onClick={prevSlide}
-                            className="w-10 h-10 border border-emerald-600 rounded-lg bg-white flex items-center justify-center hover:bg-emerald-50"
+                            className="w-10 h-10 bg-white/10 border border-white/40 rounded-lg flex items-center justify-center text-white hover:bg-white/20 backdrop-blur-sm"
                         >
-                            <ChevronUp size={20} />
+                            ←
                         </button>
+
                         <button
                             onClick={nextSlide}
-                            className="w-10 h-10 border border-emerald-600 rounded-lg bg-white flex items-center justify-center hover:bg-emerald-50"
+                            className="w-10 h-10 text-black bg-white/10 border border-white/40 rounded-lg flex items-center justify-center text-white hover:bg-white/20 backdrop-blur-sm"
                         >
-                            <ChevronDown size={20} />
+                            →
                         </button>
                     </div>
                 </div>

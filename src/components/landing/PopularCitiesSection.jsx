@@ -3,11 +3,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Button from "../Button";
 import { POPULAR_CITIES } from "../../data/landingData";
 import textbg1 from "../../assets/bg.jpeg";
-import bgPattern from "../../assets/abuja.png"; // your dotted building background
+import bgPattern from "../../assets/abuja.png"; 
 
 export default function PopularCitiesSection() {
   const [current, setCurrent] = useState(0);
-  const total = Math.ceil(POPULAR_CITIES.length / 4); // 4 cards per slide
+  const total = Math.ceil(POPULAR_CITIES.length / 4); 
 
   const next = () => setCurrent((prev) => (prev + 1) % total);
   const prev = () => setCurrent((prev) => (prev - 1 + total) % total);
@@ -29,7 +29,7 @@ export default function PopularCitiesSection() {
         backgroundSize: "cover",
       }}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto ">
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8 ml-[100px]">
           <div className="max-w-lg relative text-center">
@@ -50,7 +50,7 @@ export default function PopularCitiesSection() {
           </div>
 
           <div className="justify-self-end max-w-md flex flex-col w-[30%]">
-            <p className="mt-3 text-xl mb-2 text-end leading-relaxed">
+            <p className="mt-3 text-xl mb-2 text-end leading-relaxed text-black">
               Explore cities where quality living meets <br /> great
               opportunities.
             </p>
@@ -79,7 +79,7 @@ export default function PopularCitiesSection() {
                       overflow-hidden 
                       
                       bg-white
-                      h-[260px] sm:h-[320px] lg:h-[60vh]
+                      h-[260px] sm:h-[320px] lg:h-[50vh]
                     "
                   >
                     <img
@@ -132,19 +132,18 @@ export default function PopularCitiesSection() {
 
           {/* arrows */}
           <div className="flex gap-3">
-            <button
-              onClick={prev}
-              className="w-10 h-10 bg-transparent border border-emerald-500 rounded-lg flex items-center justify-center text-emerald-600 hover:bg-emerald-50"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button
-              onClick={next}
-              className="w-10 h-10 bg-transparent border border-emerald-500 rounded-lg flex items-center justify-center text-emerald-600 hover:bg-emerald-50"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
+          <button
+            onClick={prev}
+            className="w-10 h-10 border text-emerald-600 border-emerald-600 rounded-lg bg-white flex items-center justify-center hover:bg-emerald-50"                        >
+            ←
+          </button>
+
+          <button
+            onClick={next}
+            className="w-10 h-10 border text-emerald-600 border-emerald-600 rounded-lg bg-white flex items-center justify-center hover:bg-emerald-50"                        >
+            →
+          </button>
+        </div>
         </div>
       </div>
     </section>

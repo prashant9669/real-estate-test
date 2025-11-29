@@ -7,7 +7,7 @@ import { DREAM_HOME_CARDS } from "../../data/landingData";
 export default function DreamHomeSection() {
     return (
         <section className="bg-[url('./assets/LAGOS_bg.png')] bg-cover bg-center py-20">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto">
 
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-8 ml-[100px]"> 
                     <div className="max-w-lg relative text-center"> 
@@ -17,7 +17,7 @@ export default function DreamHomeSection() {
                             <span className="text-white">Fi</span>nd your{" "} 
                             <span className="text-[#3FD797]">dream home</span> in the city&apos;s heart </h2> 
                             </div> <div className="justify-self-end max-w-md flex flex-col w-[30%]"> 
-                                <p className="mt-3 text-xl mb-2 text-end leading-relaxed"> Discover handpicked properties in Lagos's most desirable locations. </p> 
+                                <p className="mt-3 text-xl mb-2 text-black text-end leading-relaxed"> Discover handpicked properties in Lagos's most desirable locations. </p> 
                                 <Button className="self-start md:self-end border border-slate-300 hover:bg-slate-50 text-slate-700 px-6 py-2"> View All → 
                                 </Button> 
                     </div> 
@@ -41,7 +41,7 @@ export default function DreamHomeSection() {
                                             {card.badgesTop.map((b) => (
                                                 <span
                                                     key={b}
-                                                    className="bg-white/95 px-3 py-1 rounded-full text-xs font-semibold shadow-md"
+                                                    className="bg-white/95 px-3 py-1 rounded-full text-xs text-black font-semibold shadow-md"
                                                 >
                                                     {b}
                                                 </span>
@@ -49,13 +49,14 @@ export default function DreamHomeSection() {
                                             ))}
                                         </div>
                                         {/* Content */}
-                                        <div className="p-6 absolute bottom-0 bg-black text-white w-full bg-opacity-40 backdrop-blur-sm">
+                                        <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
+                    <div className="rounded-2xl bg-black/55 backdrop-blur-sm px-4 py-3">
                                             <p className="text-2xl font-medium mb-1">
                                                 {card.price}
                                             </p>
-                                            <h3 className="text-xl font-medium mb-1">{card.title}</h3>
+                                            <h3 className="text-lg font-medium mb-1">{card.title}</h3>
                                             <p className="text-white-600 text-sm mb-2">{card.location}</p>
-
+                                            </div>
                                         </div>
                                     </div>
 

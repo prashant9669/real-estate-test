@@ -3,7 +3,7 @@ import AnimatedWrapper from "../AnimatedWrapper";
 export default function BigCtaBand() {
   return (
     <section className=" bg-[url('./assets/contact.png')] bg-cover h-[100vh] py-16">
-      <div className="container mx-auto px-6 relative flex flex-col gap-10 justify-center h-full">
+      <div className="container mx-auto relative flex flex-col gap-10 justify-center h-full">
       
         <div className="grid  items-center gap-6 lg:gap-12">
           <AnimatedWrapper>

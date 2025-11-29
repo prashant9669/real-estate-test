@@ -1,65 +1,81 @@
+// components/PropertyGallery.jsx
 import { useState } from "react";
 import ImageModal from "./ImageModal";
 
 export default function PropertyGallery({ images }) {
-  const [open, setOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
 
-  const handleOpen = (index) => {
+  if (!images || images.length === 0) return null;
+
+  const openModal = (index) => {
     setStartIndex(index);
-    setOpen(true);
+    setShowModal(true);
   };
+
+  const mainImage = images[0];
+  const sideImages = images.slice(1, 4); // 3 side images
 
   return (
     <>
-      {/* MAIN GALLERY */}
-      <div className="grid grid-cols-4 gap-4">
-        {/* BIG IMAGE */}
-        <div
-          className="col-span-3 h-[380px] rounded-xl overflow-hidden cursor-pointer"
-          onClick={() => handleOpen(0)}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {/* MAIN IMAGE */}
+        <button
+          type="button"
+          className="relative md:col-span-2 h-64 md:h-80 rounded-xl overflow-hidden group"
+          onClick={() => openModal(0)}
         >
           <img
-            src={images[0]}
-            className="w-full h-full object-cover"
+            src={mainImage}
             alt=""
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
           />
-        </div>
+          <span className="absolute bottom-3 left-3 bg-black/60 text-white text-xs px-3 py-1 rounded-full">
+            Click to view photos
+          </span>
+        </button>
 
-        {/* RIGHT SMALL IMAGES */}
-        <div className="flex flex-col gap-4">
-          {images.slice(1, 4).map((img, index) => (
-            <div
-              key={index}
-              className="h-[118px] rounded-xl overflow-hidden cursor-pointer relative"
-              onClick={() => handleOpen(index + 1)}
-            >
-              <img
-                src={img}
-                className="w-full h-full object-cover"
-                alt=""
-              />
+        {/* RIGHT SIDE SMALL IMAGES */}
+        <div className="grid grid-rows-3 gap-4 h-64 md:h-80">
+          {sideImages.map((img, idx) => {
+            const realIndex = idx + 1; // because main is 0
+            const isLast = idx === 2 && images.length > 4;
 
-              {/* LAST IMAGE WITH OVERLAY */}
-              {index === 2 && (
-                <div
-                  onClick={() => handleOpen(0)}
-                  className="absolute inset-0 bg-black/60 text-white flex items-center justify-center text-3xl font-semibold"
-                >
-                  +{images.length - 3}
-                </div>
-              )}
-            </div>
-          ))}
+            return (
+              <button
+                key={realIndex}
+                type="button"
+                onClick={() => openModal(realIndex)}
+                className="relative rounded-xl overflow-hidden group"
+              >
+                <img
+                  src={img}
+                  alt=""
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                />
+
+                {/* LAST BOX WITH +24 OVERLAY */}
+                {isLast && (
+                  <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center">
+                    <p className="text-white text-lg font-semibold">
+                      +{images.length - 4}
+                    </p>
+                    <p className="text-white text-xs opacity-80 mt-1">
+                      View all photos
+                    </p>
+                  </div>
+                )}
+              </button>
+            );
+          })}
         </div>
       </div>
 
-      {/* IMAGE MODAL */}
-      {open && (
+      {showModal && (
         <ImageModal
           images={images}
           startIndex={startIndex}
-          onClose={() => setOpen(false)}
+          onClose={() => setShowModal(false)}
         />
       )}
     </>
